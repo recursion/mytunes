@@ -2,12 +2,13 @@
 var SongQueue = Songs.extend({
 
   initialize: function(){
-    this.on('enqueue', this.enqueue, this)
+    this.on('add', this.enqueue, this)
         .on('dequeue', this.dequeue, this)
         .on('ended', this.ended, this);
   },
 
   enqueue: function(){
+    console.log(this.models.length);
     if (this.models.length === 1){ this.playFirst(); }
     console.log('Song added!');
   },
