@@ -8,19 +8,20 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(){
-    console.log(this.models.length);
-    if (this.models.length === 1){ this.playFirst(); }
+    if (this.models.length === 1){
+      this.playFirst();
+    }
     console.log('Song added!');
   },
 
   dequeue: function(song){
-    // if (song){
-    //   this.remove(song);
-    //   console.log('Song removed!');
-    // } else {
+    if (song){
+      this.remove(song);
+      console.log('Song removed!');
+    } else {
       this.shift();
       console.log('Song removed!');
-    // }
+    }
   },
 
   ended: function(song){
