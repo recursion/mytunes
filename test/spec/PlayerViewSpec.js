@@ -53,4 +53,25 @@ describe('PlayerView', function() {
     });
   });
 
+  describe('Queue behavior', function() {
+    it('removes songs from the song queue when clicked on', function(){
+      var firstSong = library.at(0)
+        , secondSong = library.at(1)
+        , thirdSong = library.at(2)
+        , songQueue = appView.model.get('songQueue');
+      // Set up a queue of three songs
+      songQueue.add(firstSong);
+      songQueue.add(secondSong);
+      songQueue.add(thirdSong);
+      expect(songQueue.length).to.equal(3);
+      // User clicks on song in song queue
+      var newSongView = new SongQueueEntryView({model: songQueue.at(0)});
+      newSongView.el.click();
+      expect(songQueue.length).to.equal(2);
+      newSongView = new SongQueueEntryView({model: songQueue.at(0)});
+      newSongView.el.click();
+      expect(songQueue.length).to.equal(1);
+    });
+  });
+
 });
