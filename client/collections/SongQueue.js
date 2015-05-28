@@ -18,14 +18,15 @@ var SongQueue = Songs.extend({
       console.log('Song removed!');
     } else {
       this.shift();
-      console.log('Song removed!');
     }
   },
 
   ended: function(song){
     this.dequeue(song);
+    console.log('Ended song dequeued');
     if (this.models.length){
       this.playFirst();
+      console.log('Song ended!');
     }
   },
 
