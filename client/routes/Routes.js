@@ -1,7 +1,7 @@
 var MusicRouter = Backbone.Router.extend({
   /* define the route and function maps for this router */
   routes: {
-    "about" : "showAbout",
+    "" : "showAbout",
     "music": "showMusic"
   },
 
