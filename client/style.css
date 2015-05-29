@@ -1,0 +1,31 @@
+body {
+
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  /*  position: relative;
+  top: 10%;
+  transform: translateY(-50%);*/
+}
+
+audio {
+}
+
+h2 {
+
+}
+
+ul {
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.artist {
+  font-style: italic;
+}
